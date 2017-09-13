@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Database -->
+<resources>
+
+    <!-- Database Name -->
+    <string name="localdb_name">local_database</string>
+    
+    <!-- Database Version -->
+	<integer name="localdb_version">1</integer>
+	
+	<!-- Database Structure -->
+    <string name="localdb_structure">
+        CREATE TABLE locations (id INTEGER PRIMARY KEY AUTOINCREMENT, latitude REAL NOT NULL, longitude REAL NOT NULL, date INTEGER NOT NULL);
+        CREATE TABLE webrequest (id INTEGER PRIMARY KEY AUTOINCREMENT, type INTEGER NOT NULL, url TEXT NOT NULL, params TEXT NOT NULL, conto INTEGER NOT NULL, readto INTEGER NOT NULL);
+    	CREATE TABLE webrequestcache (id INTEGER PRIMARY KEY AUTOINCREMENT, type INTEGER NOT NULL, url TEXT NOT NULL, params TEXT, resultcode INTEGER NOT NULL, resultbody TEXT);
+	</string>
+    
+    <!-- Database Upgrade -->
+    <string name="localdb_upgrade">
+        <!-- DROP TABLE IF EXISTS ..; -->
+    </string>
+    
+    <!-- Database Reset onUpgrade -->
+	<bool name="localdb_reset_on_upgrade"> true </bool>
+	
+	
+	<!-- Location Dao -->
+	<string name="localdb_locations_name"> locations </string>
+	<string name="localdb_locations_pk"> id </string>
+	<string name="localdb_locations_key_a"> latitude </string>
+	<string name="localdb_locations_key_b"> longitude </string>
+	<string name="localdb_locations_key_c"> date </string>
+	
+	<!-- WebRequest Dao -->
+	<string name="localdb_webrequest_name"> webrequest </string>
+	<string name="localdb_webrequest_pk"> id </string>
+	<string name="localdb_webrequest_key_a"> type </string>
+	<string name="localdb_webrequest_key_b"> url </string>
+	<string name="localdb_webrequest_key_c"> params </string>
+	<string name="localdb_webrequest_key_d"> conto </string>
+	<string name="localdb_webrequest_key_e"> readto </string>
+
+	<!-- WebRequestCache Dao -->
+	<string name="localdb_webrequestcache_name"> webrequestcache </string>
+	<string name="localdb_webrequestcache_pk"> id </string>
+	<string name="localdb_webrequestcache_key_a"> type </string>
+	<string name="localdb_webrequestcache_key_b"> url </string>
+	<string name="localdb_webrequestcache_key_c"> params </string>
+	<string name="localdb_webrequestcache_key_d"> resultcode </string>
+	<string name="localdb_webrequestcache_key_e"> resultbody </string>
+</resources>

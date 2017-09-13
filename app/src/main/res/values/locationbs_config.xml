@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Location Based Services Config -->
+<resources>
+    
+    <!-- Min Time to Update -->
+    <integer name="location_min_time_update">30000</integer>
+    
+	<!-- Min Distance to Update -->
+    <integer name="location_min_distance_update">10000</integer>
+    
+
+   
+</resources>

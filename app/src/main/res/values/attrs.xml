@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProportionalLayout">
+        <attr name="based_screen_width" format="integer"/>
+        <attr name="based_screen_height" format="integer"/>
+        <attr name="edit_mode_width" format="integer"/>
+        <attr name="edit_mode_height" format="integer"/>
+        <attr name="content_width" format="integer"/>
+        <attr name="content_height" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProportionalLayout_Layout">
+        <attr name="coordinate_x" format="float"/>
+        <attr name="coordinate_y" format="float"/>
+        <attr name="size_x" format="float"/>
+        <attr name="size_y" format="float"/>
+        <attr name="size_mode" format="enum">
+            <enum name="free" value="0"/>
+            <enum name="aspect_x" value="1" />
+            <enum name="aspect_y" value="2" />
+            <enum name="aspect_min" value="3" />
+            <enum name="aspect_max" value="4" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="MaskView">
+        <attr name="delegate_touch_to" format="reference"/>
+    </declare-styleable>
+</resources>
